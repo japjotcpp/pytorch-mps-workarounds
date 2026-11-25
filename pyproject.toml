@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torch-mps-workarounds"
+version = "0.1.0"
+description = "Explicit, tested PyTorch operator workarounds for Apple Metal"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch"]
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Japjot Singh"}]
+keywords = ["pytorch", "mps", "metal", "lstm", "projection"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Repository = "https://github.com/japjotsingh-star/torch-mps-workarounds"
+Issues = "https://github.com/japjotsingh-star/torch-mps-workarounds/issues"
+
+[project.scripts]
+torch-mps-benchmark = "torch_mps_workarounds.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
